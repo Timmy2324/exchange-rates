@@ -1,0 +1,59 @@
+.app {
+    height: 100vh;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff3f9;
+}
+
+.logo {
+    width: 50px;
+}
+
+.mainScreen {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff9fa;
+}
+
+.mainScreenWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainTitle {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.currencyCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px;
+}
+
+.currencyAmount {
+
+}
+
+.currencyCurrent {
+
+}
+
+.footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f5f8fb;
+    font-size: 12px;
+}
+
