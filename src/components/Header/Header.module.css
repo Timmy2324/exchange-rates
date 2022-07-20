@@ -12,5 +12,18 @@
 }
 
 .logo {
-    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoImg {
+    width: 48px;
+    margin-right: 10px;
+}
+
+.logoName {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
