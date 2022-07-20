@@ -3,7 +3,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: transparent;
+    background-color: #fff;
     border: 1px solid #cbcbcb;
     border-radius: 0.6em;
     cursor: pointer;

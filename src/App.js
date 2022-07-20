@@ -1,7 +1,7 @@
 import s from './App.module.css';
-import Input from "./components/Input/Input";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import {CurrencyRateCalculator} from "./views/CurrencyRateCalculator/CurrencyRateCalculator";
 
 function App() {
     return (
@@ -11,32 +11,7 @@ function App() {
                 <div className={'container'}>
                     <div className={s.mainScreenWrapper}>
                         <h1 className={s.mainTitle}>Калькулятор курса валют</h1>
-                        <div className={s.currencyCard}>
-                            <div className={s.currencyAmount}>
-                                <span>У меня есть</span>
-                                <Input/>
-                                <span>Хочу приобрести</span>
-                                <Input/>
-                            </div>
-                            <div className={s.currencyCurrent}>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Валюта</th>
-                                            <th>Курс</th>
-                                            <th>Получу</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>USD</td>
-                                            <td>60р за 1$</td>
-                                            <td>2$</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <CurrencyRateCalculator/>
                     </div>
                 </div>
             </section>

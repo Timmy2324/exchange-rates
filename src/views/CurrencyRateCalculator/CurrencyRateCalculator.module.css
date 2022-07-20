@@ -1,0 +1,63 @@
+.currencyCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.currencyAmount {
+    width: 50%;
+    padding: 40px 60px;
+}
+
+.currencyTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.inputGive {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.currencyButton {
+    margin-right: 10px;
+}
+
+.currencyButton:last-child {
+    margin-right: 0;
+}
+
+.currencyCurrent {
+    width: 50%;
+    padding: 40px 60px;
+}
+
+.currencyTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableHead {
+    font-size: 14px;
+    font-weight: 200;
+    text-align: start;
+}
+
+.tableRow {
+    border-bottom: 1px solid rgba(11,31,53,.1);
+}
+
+.tableRow > th {
+    padding: 10px 0;
+}
+
+.tableRow > td {
+    padding: 10px 0;
+}
