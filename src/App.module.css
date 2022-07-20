@@ -2,16 +2,6 @@
     height: 100vh;
 }
 
-.header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #fff3f9;
-}
-
-.logo {
-    width: 50px;
-}
-
 .mainScreen {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -48,12 +38,5 @@
 
 .currencyCurrent {
 
-}
-
-.footer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #f5f8fb;
-    font-size: 12px;
 }
 

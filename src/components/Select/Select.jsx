@@ -10,7 +10,7 @@ const Select = (props) => {
     } = props;
 
     const mappedOptions = options ? options.map((o, i) => (
-            <option className={s.option} key={i} value={o}>
+            <option key={i} value={o}>
                     {o}
             </option>
         ))
