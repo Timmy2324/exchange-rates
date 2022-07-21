@@ -4,8 +4,12 @@ import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import {useState, useEffect} from "react";
 import {currencyRateAPI} from "../../api/CurrencyRateApi";
+import {Dictionary} from "../../dictionary";
 
-export const CurrencyRateCalculator = () => {
+export const CurrencyRateCalculator = (props) => {
+    const {
+        language
+    } = props;
     const allCurrency = [
         {
             id: 1,
@@ -80,18 +84,18 @@ export const CurrencyRateCalculator = () => {
     return (
         <div className={s.currencyCard}>
             <div className={s.currencyAmount}>
-                <h3 className={s.currencyTitle}>Отдам</h3>
+                <h3 className={s.currencyTitle}>{Dictionary["calculatorCurrency"]["titleGive"][language]}</h3>
                 <Input className={s.inputGive} value={amountCurrency} onChange={(e) => setAmountCurrency(e)}/>
                 {currencyButtons}
             </div>
             <div className={s.currencyCurrent}>
-                <h3 className={s.currencyTitle}>Получу</h3>
+                <h3 className={s.currencyTitle}>{Dictionary["calculatorCurrency"]["titleReceive"][language]}</h3>
                 <table className={s.currencyTable}>
                     <thead className={s.currencyTable}>
                     <tr className={s.tableRow}>
-                        <th className={`${s.tableHead} + ${s.currencyColumn}`}>Валюта</th>
-                        <th className={`${s.tableHead} + ${s.ratesColumn}`}>Курс</th>
-                        <th className={`${s.tableHead} + ${s.totalColumn}`}>Итого</th>
+                        <th className={`${s.tableHead} + ${s.currencyColumn}`}>{Dictionary["calculatorCurrency"]["tableCurrency"][language]}</th>
+                        <th className={`${s.tableHead} + ${s.ratesColumn}`}>{Dictionary["calculatorCurrency"]["tableRates"][language]}</th>
+                        <th className={`${s.tableHead} + ${s.totalColumn}`}>{Dictionary["calculatorCurrency"]["tableTotal"][language]}</th>
                     </tr>
                     </thead>
                     <tbody>

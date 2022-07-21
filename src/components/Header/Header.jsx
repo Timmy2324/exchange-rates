@@ -3,8 +3,15 @@ import s from "./Header.module.css";
 import Select from "../Select/Select";
 import logo from "../../img/logo.svg";
 
-const Header = () => {
-    const arrLanguage = ["RU", "ENG"]
+const arrLanguage = ["RU", "ENG"];
+
+const Header = (props) => {
+
+    const {
+        changeLanguage,
+    } = props;
+
+
     return (
         <header className={s.header}>
             <div className={`${s.headerWrapper} container`}>
@@ -13,7 +20,7 @@ const Header = () => {
                     <span className={s.logoName}>exchange rate</span>
                 </div>
 
-                <Select options={arrLanguage}/>
+                <Select options={arrLanguage} onChange={changeLanguage}/>
             </div>
         </header>
     );
