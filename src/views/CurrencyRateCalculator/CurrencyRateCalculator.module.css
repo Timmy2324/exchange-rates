@@ -61,3 +61,22 @@
 .tableRow > td {
     padding: 10px 0;
 }
+
+.currencyColumn {
+    text-align: start;
+    width: 20%;
+}
+
+.ratesColumn {
+    text-align: end;
+    width: 40%;
+}
+
+.totalColumn {
+    text-align: end;
+    width: 40%;
+}
+
+.textLeft {
+    text-align: end;
+}
