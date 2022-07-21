@@ -2,16 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    flex-direction: row;
+    flex-direction: column;
     border: 1px solid black;
     border-radius: 5px;
     width: 100%;
-
 }
 
 .currencyAmount {
-    width: 50%;
-    padding: 40px 60px;
+    width: 100%;
+    padding: 20px 20px;
 }
 
 .currencyTitle {
@@ -35,8 +34,8 @@
 }
 
 .currencyCurrent {
-    width: 50%;
-    padding: 40px 60px;
+    width: 100%;
+    padding: 20px 20px;
 }
 
 .currencyTable {
@@ -64,7 +63,7 @@
 
 .currencyColumn {
     text-align: start;
-    width: 20%;
+    width: 10%;
 }
 
 .ratesColumn {
@@ -74,9 +73,31 @@
 
 .totalColumn {
     text-align: end;
-    width: 40%;
+    width: 50%;
 }
 
 .textLeft {
     text-align: end;
+}
+
+@media (min-width: 576px) {
+    .currencyAmount {
+        padding: 40px 60px;
+    }
+    .currencyCurrent {
+        padding: 40px 60px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .currencyCard {
+        flex-direction: row;
+    }
+    .currencyAmount {
+        width: 50%;
+    }
+    .currencyCurrent {
+        width: 50%;
+    }
 }
