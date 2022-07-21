@@ -24,5 +24,9 @@ export const Dictionary = {
             RU: 'Итого',
             ENG: 'Total',
         },
+        tableFor: {
+            RU: 'за',
+            ENG: 'for',
+        }
     },
 }

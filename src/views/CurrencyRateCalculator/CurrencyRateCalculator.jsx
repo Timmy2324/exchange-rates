@@ -39,7 +39,7 @@ export const CurrencyRateCalculator = (props) => {
     ];
 
     const [data, setData] = useState();
-    const [amountCurrency, setAmountCurrency] = useState(0);
+    const [amountCurrency, setAmountCurrency] = useState(1);
     const [currentCurrency, setCurrentCurrency] = useState(allCurrency[0]);
 
 
@@ -71,7 +71,7 @@ export const CurrencyRateCalculator = (props) => {
             return (<tr key={item.id} className={s.tableRow}>
                 <td className={s.currencyColumn}>{item.currency}</td>
                 <td className={s.ratesColumn}>
-                    {getRate(item.currency)} <span dangerouslySetInnerHTML={{__html: currentCurrency.symbol}}/> за 1
+                    {getRate(item.currency)} <span dangerouslySetInnerHTML={{__html: currentCurrency.symbol}}/> {Dictionary["calculatorCurrency"]["tableFor"][language]} 1
                     <span dangerouslySetInnerHTML={{__html: item.symbol}}/></td>
                 <td className={s.totalColumn}>{Math.floor(amountCurrency / getRate(item.currency) * 10000) / 10000 || 0} <span dangerouslySetInnerHTML={{__html: item.symbol}}/></td>
             </tr>)
@@ -81,11 +81,18 @@ export const CurrencyRateCalculator = (props) => {
         setCurrentCurrency(currency);
     }
 
+    const onChangeAmountCurrency = (e) => {
+        if (e.length > 6) {
+            return;
+        }
+        return setAmountCurrency(e.replace(/\D/g, ''));
+    }
+
     return (
         <div className={s.currencyCard}>
             <div className={s.currencyAmount}>
                 <h3 className={s.currencyTitle}>{Dictionary["calculatorCurrency"]["titleGive"][language]}</h3>
-                <Input className={s.inputGive} value={amountCurrency} onChange={(e) => setAmountCurrency(e)}/>
+                <Input className={s.inputGive} value={amountCurrency} onChange={onChangeAmountCurrency}/>
                 {currencyButtons}
             </div>
             <div className={s.currencyCurrent}>
